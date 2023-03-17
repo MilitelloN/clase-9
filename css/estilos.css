@@ -1,0 +1,197 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+.colores {
+  color: #07020d;
+  color: #f1e9db;
+  color: #5db7de;
+  color: #a39b8b;
+  color: #716a5c;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: #07020d;
+  background-color: #f1e9db;
+  margin: 0;
+
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado y barra de navegación principal */
+header {
+  background-color: #07020d;
+  padding: 32px 0;
+}
+
+.contenedor-header {
+  width: 1200px; /* mismo ancho que las secciones.*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+    aling-items: Alinea los items segun el eje secundario.
+*/
+
+nav ul {
+  display: flex;
+  gap: 32px;
+}
+/*gap: Agrega espacio entre elementos que estan contenidos en un contenedor flex y solo entre los elementos no entre el elemento y el margen.*/
+
+/* Bienvenida */
+#bienvenida {
+  height: 450px;
+  background-image: url(../img/bienvenida.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#bienvenida h1 {
+  background-color: black;
+  color: #a39b8b;
+  padding: 32px 0px;
+  font-weight: 300;
+  font-size: 38px;
+}
+
+/* Novedades */
+.contenedor-novedades {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+/*
+    flex-direction: determina el eje prinicipal. row (horizontal) y column (vertical).
+    Justify-content: justifica los elementos segun el eje principal.
+        space: Es el espacio que sobra.
+            around: divide el espacio que sobra y lo coloca alrededor de los objetos. entre dos objetos hay el doble de espacio.
+            between: fija el primero y el ultimo pegados a los bordes y al resto les divide el espacio.
+            evenly: es around pero el espacio es parejo siempre.
+
+*/
+
+article {
+  background-color: #716a5c;
+  width: 247px; /* Es el mismo width que las imagenes*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+article h2,
+article h3 {
+  margin: 0;
+}
+
+article h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+article h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Sobre Nosotros */
+video {
+  width: 650px;
+}
+
+iframe {
+  border: none;
+  width: 1200px;
+  height: 250px;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.direccion {
+  width: 550px;
+}
+
+/* Catálogo */
+
+/* Footer / Pié de página */
+footer {
+  background-color: #716a5c;
+  color: #f1e9db;
+  padding: 65px 0;
+  margin-top: 32px;
+}
+
+/* Formularios */
+.formulario {
+  text-align: center;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  display: block; /* agrega los saltos de línea*/
+  width: 450px; /* ancho */
+  margin: 15px auto; /* centra el elemento */
+
+  padding: 10px; /* área del texto */
+
+  border-radius: 0px; /* ajuste del radio de las esquinas */
+  border: none;
+  border-bottom: 2px solid #716a5c;
+
+  outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  border-bottom: 2px solid #5db7de;
+}
+
+.formulario textarea {
+  height: 200px;
+}
+
+.formulario .opciones {
+  display: inline-block; /* línea bloque, no tiene saltos de línea y el ancho del elemento es fijado por su contenido. */
+  width: auto;
+  margin: 5px;
+}
+
+.formulario .submit {
+  background-color: #5db7de;
+  font-weight: 700;
+  border: none;
+}
